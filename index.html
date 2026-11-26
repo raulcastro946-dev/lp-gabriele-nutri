@@ -30,7 +30,8 @@
   "@context": "https://schema.org",
   "@type": "Dietitian",
   "name": "Emily Gabriele Nutricionista",
-  "description": "Nutricionista, especialista em Atenção Primária à Saúde (UFRN). Consulta nutricional com avaliação completa em Belém-PA.",
+  "telephone": "+55 91 98401-7537",
+  "description": "Nutricionista clínica e hospitalar, especialista em Atenção Primária à Saúde (UFRN). Consulta nutricional com avaliação completa em Belém-PA.",
   "sameAs": ["https://www.instagram.com/gabrielee_nutri/"],
   "address": {"@type": "PostalAddress", "streetAddress": "Travessa Curuzu, 2343-A (C.E.N.S.E)", "addressLocality": "Belém", "addressRegion": "PA", "addressCountry": "BR"},
   "knowsAbout": ["Saúde intestinal", "Saúde da mulher", "Emagrecimento", "Nutrição esportiva", "Alimentação saudável"]
@@ -101,7 +102,7 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400}
 .beam.b2{left:calc(50% - 23vmax);background:conic-gradient(from 180deg at 50% 0%,transparent 0 168deg,rgba(246,238,233,.4) 180deg,transparent 192deg);animation:sway 9s ease-in-out infinite reverse}
 .beam.b3{right:0;rotate:14deg;animation:sway 8s ease-in-out infinite}
 @keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
-.halo{position:absolute;left:68%;bottom:8vh;width:min(70vh,640px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(var(--glow),.55),rgba(184,77,112,.25) 55%,transparent 72%);filter:blur(6px);opacity:0}
+.halo{position:absolute;left:66%;bottom:8vh;width:min(70vh,640px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(var(--glow),.55),rgba(184,77,112,.25) 55%,transparent 72%);filter:blur(6px);opacity:0}
 .sparks{position:absolute;inset:0;pointer-events:none;opacity:0}
 .sparks i{position:absolute;width:6px;height:6px;border-radius:50%;background:#ffd6e2;box-shadow:0 0 14px 4px rgba(var(--glow),.7);animation:float 6s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-22px);opacity:1}}
@@ -111,9 +112,10 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400}
 .wd em{display:block;font-size:clamp(24px,2.8vw,46px);color:var(--rose);margin-top:.2em}
 .wd.l{left:7vw;top:22%;text-align:left}
 .wd.r{left:7vw;top:50%;text-align:left}
-.figure{position:absolute;left:68%;bottom:0;height:min(80svh,720px);width:auto;max-width:none;transform:translateX(-50%);opacity:0;
-  -webkit-mask-image:radial-gradient(ellipse 66% 74% at 56% 52%,#000 64%,transparent 100%);mask-image:radial-gradient(ellipse 66% 74% at 56% 52%,#000 64%,transparent 100%);
-  will-change:transform,opacity}
+.figure{position:absolute;left:66%;bottom:6vh;height:min(76svh,700px);aspect-ratio:814/1200;transform:translateX(-50%);opacity:0;border-radius:999px 999px 26px 26px;overflow:hidden;
+  border:1px solid rgba(242,167,188,.35);box-shadow:0 0 0 10px rgba(242,167,188,.06),0 40px 90px -20px rgba(var(--glow),.45);will-change:transform,opacity}
+.figure img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.figure::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,23,20,.45),transparent 35%)}
 .meta{position:absolute;left:0;right:0;bottom:clamp(18px,4vh,40px);text-align:center;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:700;opacity:0;z-index:3;text-shadow:0 2px 12px rgba(0,0,0,.85)}
 .curtain{position:absolute;inset:0;z-index:5;pointer-events:none}
 .panel{position:absolute;top:-4%;bottom:-4%;width:52%;background:url(assets/folhas.webp) center/cover no-repeat;transform-origin:50% 50%;will-change:transform,filter;box-shadow:0 0 80px rgba(0,0,0,.7)}
@@ -132,7 +134,7 @@ em,.it{font-family:var(--serif);font-style:italic;font-weight:400}
   .wd.l{top:12%}.wd.r{top:30%}
   .wd .big{font-size:clamp(54px,17vw,92px)}
   .wd em{font-size:22px}
-  .figure{height:auto;width:118vw;bottom:0;left:50%;-webkit-mask-image:radial-gradient(ellipse 62% 68% at 52% 62%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 62% 68% at 52% 62%,#000 62%,transparent 100%)}
+  .figure{height:48svh;left:50%;bottom:5svh}
   .halo{bottom:4vh;width:96vw;left:50%}
   .meta{display:none}
 }
@@ -252,6 +254,23 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
 .bar .btn{width:100%;min-height:52px}
 @media (max-width:760px){.bar{display:block}.fab{bottom:calc(84px + var(--safe-b))}body.bar-on .fab{opacity:0;pointer-events:none}}
 
+
+.shelf{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:50px max(20px,calc((100% - 1180px)/2)) 30px;scrollbar-width:none;perspective:1400px}
+.shelf::-webkit-scrollbar{display:none}
+.shelf::before,.shelf::after{content:"";flex:none;width:max(0px,calc((100% - 1260px)/2))}
+.book{flex:none;width:clamp(190px,19vw,250px);scroll-snap-align:start}
+.book a{display:block}
+.book .cover{position:relative;display:block;border-radius:4px 12px 12px 4px;overflow:hidden;transform:rotateY(-14deg);transform-origin:left center;transition:transform .6s var(--ease),box-shadow .6s;
+  box-shadow:-2px 0 0 rgba(255,255,255,.15) inset,14px 22px 40px -12px rgba(0,0,0,.7),0 0 0 1px rgba(246,238,233,.08)}
+.book .cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;z-index:2;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.18) 40%,transparent)}
+.book .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18),transparent 35%);pointer-events:none}
+.book img{width:100%;height:auto;aspect-ratio:560/790;object-fit:cover}
+.book a:hover .cover,.book a:focus-visible .cover{transform:rotateY(0) translateY(-8px);box-shadow:0 30px 60px -18px rgba(var(--glow),.55)}
+.book figcaption{margin-top:16px;font-size:14px;color:var(--muted);line-height:1.45}
+.book figcaption b{display:block;font-family:var(--serif);font-weight:500;font-size:19px;color:var(--ink);margin-bottom:4px}
+.shelf-cta{margin-top:10px}
+.gestao{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-top:40px}
+@media (max-width:760px){.gestao{flex-direction:column;align-items:flex-start}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
@@ -272,7 +291,7 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
     <li><a href="#sobre">Sobre mim</a></li>
     <li><a href="#cuidado">Como te ajudo</a></li>
     <li><a href="#avaliacao">Avaliação</a></li>
-    <li><a href="#materiais">Materiais</a></li>
+    <li><a href="#materiais">E-books</a></li>
     <li><a href="#visite">Onde atendo</a></li>
   </ul>
   <a class="btn-ghost cta" data-cta="nav" data-msg="Oi, Emily! Vim pelo seu site e quero agendar uma consulta." href="#">Agendar consulta <span aria-hidden="true">›</span></a>
@@ -289,7 +308,7 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
         <div class="wd l" id="wl"><span class="big">Nutrir</span><em>por dentro.</em></div>
         <div class="wd r" id="wr"><span class="big">Brilhar</span><em>por fora.</em></div>
       </div>
-      <img class="figure" id="fig" src="assets/gabi.webp" width="850" height="850" alt="Emily Gabriele, nutricionista, sorrindo e segurando um adipômetro">
+      <div class="figure" id="fig"><img src="assets/destaque.webp" width="814" height="1552" alt="Emily Gabriele, nutricionista, de jaleco no consultório, sorrindo" fetchpriority="high"></div>
       <p class="meta" id="meta">Saúde intestinal · Saúde da mulher · Alimentação de verdade</p>
     </div>
     <div class="curtain" aria-hidden="true"><div class="panel pl" id="pl"></div><div class="panel pr" id="pr"></div></div>
@@ -298,7 +317,7 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
       <h1>Emily Gabriele<span>Nutricionista</span></h1>
       <p class="lead">Nutrição de verdade para você se sentir bem por dentro e brilhar por fora. Sem dietas malucas.</p>
       <a class="btn cta" data-cta="hero" data-msg="Oi, Emily! Vim pelo seu site e quero agendar uma consulta." href="#"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"></svg><span class="lbl">Quero agendar minha consulta</span></a>
-      <p class="micro">Especialista em Atenção Primária à Saúde · <b>UFRN</b></p>
+      <p class="micro">Nutricionista clínica e hospitalar · <b>Especialista em Atenção Primária à Saúde (UFRN)</b></p>
     </div>
     <div class="scroll-hint" id="hint" aria-hidden="true">Role<i></i></div>
   </div>
@@ -314,13 +333,13 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
 <section class="pad" id="sobre" aria-labelledby="t-sobre">
   <div class="wrap about">
     <figure class="about-photo" data-r>
-      <div class="photo-arch"><img src="assets/consultorio.webp" width="813" height="1373" loading="lazy" alt="Emily Gabriele de jaleco no consultório, sorrindo"></div>
+      <div class="photo-arch"><img src="assets/perfil.webp" width="850" height="850" loading="lazy" alt="Emily Gabriele sorrindo, segurando um adipômetro"></div>
       <figcaption class="cap"><span class="it">Especialista em Atenção Primária à Saúde</span>Universidade Federal do Rio Grande do Norte · UFRN</figcaption>
     </figure>
     <div class="about-text">
       <p class="eyebrow" data-r>Prazer, sou a Emily</p>
       <h2 class="h2" id="t-sobre" data-r>Nutrição leve, <em>feita para a sua vida real</em></h2>
-      <p data-r>Sou nutricionista e especialista em Atenção Primária à Saúde pela UFRN. Acredito em uma nutrição sem terrorismo: comida de verdade, combinações simples e um plano que cabe na sua rotina e no seu bolso.</p>
+      <p data-r>Sou nutricionista clínica e hospitalar, especialista em Atenção Primária à Saúde pela UFRN. Acredito em uma nutrição sem terrorismo: comida de verdade, combinações simples e um plano que cabe na sua rotina e no seu bolso.</p>
       <p data-r>Na consulta, a gente olha para você por inteiro: intestino, energia, ciclo, treino e o que você gosta de comer. O objetivo é você se sentir bem e manter isso no dia a dia.</p>
       <ul class="values" data-r>
         <li>Comida de verdade</li>
@@ -380,28 +399,29 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
 <section class="pad pt0" id="materiais" aria-labelledby="t-mat">
   <div class="wrap">
     <p class="eyebrow" data-r>Materiais e serviços</p>
-    <h2 class="h2" id="t-mat" data-r>Para ir <em>além da consulta.</em></h2>
-    <div class="duo">
-      <article class="card" data-r>
-        <h3>E-books <em>práticos e editáveis</em></h3>
-        <p>Materiais digitais cheios de conteúdo para o seu dia a dia, ou para personalizar e usar com os seus pacientes.</p>
-        <ul class="books">
-          <li>Descomplica o Emagrecimento</li>
-          <li>50 Receitas Pós-Treino</li>
-          <li>Guia de Marmitas Fitness</li>
-          <li>Manual Prático para Comprar Bem no Mercado</li>
-          <li>Guia para Tirar suas Próprias Medidas</li>
-          <li>O que Comer no Pré-Treino</li>
-        </ul>
-        <a class="btn-ghost cta" data-cta="ebooks" data-msg="Oi, Emily! Vim pelo seu site e quero conhecer os *e-books*." href="#">Quero conhecer os materiais</a>
-      </article>
-      <article class="card rose" data-r>
+    <h2 class="h2" id="t-mat" data-r>E-books <em>para ir além da consulta.</em></h2>
+    <p class="sub" data-r>Materiais digitais práticos, feitos para o dia a dia. Também em versão editável para nutricionistas personalizarem com a própria marca.</p>
+  </div>
+  <div class="shelf">
+      <figure class="book" data-r><a class="cta" data-cta="ebook-figado" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *Gordura no fígado*." href="#"><span class="cover"><img src="assets/ebooks/figado.webp" width="560" height="790" loading="lazy" alt="Capa do e-book Gordura no fígado"></span><figcaption><b>Gordura no fígado</b>Alimentação, movimento e hábitos para cuidar do fígado</figcaption></a></figure>
+      <figure class="book" data-r><a class="cta" data-cta="ebook-diabetes" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *Diabetes & Nutrição*." href="#"><span class="cover"><img src="assets/ebooks/diabetes.webp" width="560" height="790" loading="lazy" alt="Capa do e-book Diabetes & Nutrição"></span><figcaption><b>Diabetes & Nutrição</b>Alimentação e autocuidado para viver melhor com diabetes</figcaption></a></figure>
+      <figure class="book" data-r><a class="cta" data-cta="ebook-emagrecimento" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *Descomplica o emagrecimento*." href="#"><span class="cover"><img src="assets/ebooks/emagrecimento.webp" width="560" height="790" loading="lazy" alt="Capa do e-book Descomplica o emagrecimento"></span><figcaption><b>Descomplica o emagrecimento</b>Sem viver de restrições e complicações</figcaption></a></figure>
+      <figure class="book" data-r><a class="cta" data-cta="ebook-marmitas" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *Guia de marmitas*." href="#"><span class="cover"><img src="assets/ebooks/marmitas.webp" width="560" height="790" loading="lazy" alt="Capa do e-book Guia de marmitas"></span><figcaption><b>Guia de marmitas</b>Como preparar marmitas saudáveis</figcaption></a></figure>
+      <figure class="book" data-r><a class="cta" data-cta="ebook-pre-treino" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *O que comer no pré-treino*." href="#"><span class="cover"><img src="assets/ebooks/pre-treino.webp" width="560" height="790" loading="lazy" alt="Capa do e-book O que comer no pré-treino"></span><figcaption><b>O que comer no pré-treino</b>Combinações práticas antes do treino</figcaption></a></figure>
+      <figure class="book" data-r><a class="cta" data-cta="ebook-pos-treino" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *50 receitas pós-treino*." href="#"><span class="cover"><img src="assets/ebooks/pos-treino.webp" width="560" height="790" loading="lazy" alt="Capa do e-book 50 receitas pós-treino"></span><figcaption><b>50 receitas pós-treino</b>Preparações com mais de 25 g de proteína</figcaption></a></figure>
+      <figure class="book" data-r><a class="cta" data-cta="ebook-mercado" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *Manual para comprar bem no mercado*." href="#"><span class="cover"><img src="assets/ebooks/mercado.webp" width="560" height="790" loading="lazy" alt="Capa do e-book Manual para comprar bem no mercado"></span><figcaption><b>Manual para comprar bem no mercado</b>Escolhas inteligentes no carrinho</figcaption></a></figure>
+      <figure class="book" data-r><a class="cta" data-cta="ebook-medidas" data-msg="Oi, Emily! Vim pelo seu site e quero o e-book *Guia para tirar suas medidas*." href="#"><span class="cover"><img src="assets/ebooks/medidas.webp" width="560" height="790" loading="lazy" alt="Capa do e-book Guia para tirar suas medidas"></span><figcaption><b>Guia para tirar suas medidas</b>Acompanhe sua evolução em casa</figcaption></a></figure>
+  </div>
+  <div class="wrap">
+    <div class="shelf-cta" data-r><a class="btn cta" data-cta="ebooks" data-msg="Oi, Emily! Vim pelo seu site e quero conhecer os *e-books* e os valores." href="#"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"></svg><span class="lbl">Quero conhecer os e-books</span></a></div>
+    <article class="card rose gestao" data-r>
+      <div>
         <p class="eyebrow">Para nutricionistas</p>
         <h3 style="margin-top:12px">Gestão de Instagram <em>para nutris</em></h3>
         <p>Uma gestão completa para manter o seu perfil organizado, ativo e atrativo, enquanto você se dedica ao que faz de melhor: cuidar dos seus pacientes.</p>
-        <a class="btn cta" data-cta="gestao" data-msg="Oi, Emily! Sou nutricionista e quero saber da *gestão de Instagram*." href="#"><span class="lbl">Quero saber mais</span></a>
-      </article>
-    </div>
+      </div>
+      <a class="btn cta" data-cta="gestao" data-msg="Oi, Emily! Sou nutricionista e quero saber da *gestão de Instagram*." href="#"><span class="lbl">Quero saber mais</span></a>
+    </article>
   </div>
 </section>
 
@@ -442,6 +462,7 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
       <h2 class="h2" id="t-vis" data-r>Te espero <em>no consultório.</em></h2>
       <dl data-r>
         <div><dt>Endereço</dt><dd>Travessa Curuzu, 2343-A<small>C.E.N.S.E · Belém-PA</small></dd></div>
+        <div><dt>WhatsApp</dt><dd>(91) 98401-7537<small>Agendamentos e dúvidas</small></dd></div>
         <div><dt>Instagram</dt><dd>@gabrielee_nutri<small>Conteúdo sobre intestino, chás, grãos e alimentação de verdade</small></dd></div>
       </dl>
       <div class="row-btns" data-r>
@@ -469,7 +490,7 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
     <h2 class="h2" id="t-fin" data-r>Vamos começar <em>juntas?</em></h2>
     <div data-r>
       <a class="btn cta" data-cta="final" data-msg="Oi, Emily! Vim pelo seu site e quero agendar minha consulta." href="#"><span class="lbl">Quero agendar minha consulta</span></a>
-      <p class="micro">Atendimento no C.E.N.S.E · <b>Belém-PA</b></p>
+      <p class="micro">WhatsApp <b>(91) 98401-7537</b> · Atendimento no C.E.N.S.E, Belém-PA</p>
     </div>
   </div>
 </section>
@@ -483,13 +504,14 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
     </div>
     <div>
       <h4>Navegue</h4>
-      <ul><li><a href="#sobre">Sobre mim</a></li><li><a href="#cuidado">Como te ajudo</a></li><li><a href="#materiais">Materiais</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
+      <ul><li><a href="#sobre">Sobre mim</a></li><li><a href="#cuidado">Como te ajudo</a></li><li><a href="#materiais">E-books</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
     </div>
     <div>
       <h4>Contato</h4>
       <ul>
         <li><a href="https://www.instagram.com/gabrielee_nutri/" target="_blank" rel="noopener">Instagram @gabrielee_nutri</a></li>
         <li>C.E.N.S.E · Travessa Curuzu, 2343-A · Belém-PA</li>
+        <li><a class="cta" data-cta="rodape" data-msg="Oi, Emily! Vim pelo seu site e quero conversar." href="#">WhatsApp (91) 98401-7537</a></li>
         <li>Especialista em Atenção Primária à Saúde · UFRN</li>
       </ul>
     </div>
@@ -505,7 +527,7 @@ footer{padding:44px 0 0;border-top:1px solid var(--line);overflow:hidden}
 (function(){
   // Contato: preencha WHATSAPP (ex.: '5591999999999') e o site passa a usar o WhatsApp.
   // Enquanto estiver vazio, os botões abrem o Direct do Instagram.
-  var WHATSAPP = '';
+  var WHATSAPP = '5591984017537';
   var IG = 'gabrielee_nutri';
   var ICON_IG = '<path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3 0-4.1.1C4.3 2.3 2.3 4.3 2.1 7.9 2 9 2 9.3 2 12s0 3 .1 4.1c.2 3.6 2.2 5.6 5.8 5.8 1.1.1 1.4.1 4.1.1s3 0 4.1-.1c3.6-.2 5.6-2.2 5.8-5.8.1-1.1.1-1.4.1-4.1s0-3-.1-4.1C21.7 4.3 19.7 2.3 16.1 2.1 15 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.7.1 4 1.4 4.1 4.1.1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.7-1.4 4-4.1 4.1-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.7-.1-4-1.4-4.1-4.1-.1-1-.1-1.3-.1-4s0-3 .1-4C3.9 5.3 5.3 3.9 8 3.9c1-.1 1.3-.1 4-.1z"/>';
   var ICON_WA = '<path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.6.6-.9 1.4-.9 2.2.1 1 .5 1.9 1.1 2.7 1.1 1.6 2.5 2.9 4.2 3.6.5.2 1 .4 1.4.5.6.2 1.1.1 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/>';
